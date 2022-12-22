@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Hover Effect</title>
+	<style type="text/css">
+		body{
+			height:100vh;
+			background-color:#000;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+
+		.btn{
+			width:300px;
+			height:100px;
+			background-color: #222;
+			color:#fff;
+			font-size:50px;
+			border:none;
+			border-radius:none;
+			cursor:pointer;
+
+			position: relative;
+
+			transition: all .1s;
+			
+			
+		}
+
+		.btn .line{
+			width:5px;
+			height:5px;
+			background-color: transparent;
+			border-radius:50%;
+
+			transform:translate(-50%);
+
+			position: absolute;
+			left:50%;
+			right:0;
+
+			transition: all 0.5s;
+		}
+
+		.btn:hover .line{
+			width:200px;
+			height:60px;
+			border-radius:10px;
+			border-bottom:2px solid #f4f4f4;
+		}
+
+		.btn:hover{
+			background-color:#555;
+		}
+
+	</style>
+</head>
+<body>
+
+	<button type="button" class="btn">Hover Me<span class="line"></span></button>
+
+</body>
+</html>

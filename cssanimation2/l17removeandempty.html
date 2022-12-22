@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remove and empty method</title>
+	
+</head>
+<body>
+
+
+	<div>
+		
+		<h1>Hello Heading Tag H1</h1>
+		<h2>Hello Heading Tag H2</h2>
+		<h3>Hello Heading Tag H3</h3>
+		<h2 class="headingh2">Hello Heading Tag H2</h2>
+		<h1>Hello Heading Tag H2</h1>
+		<span>Hello i am Span Tag</span>
+	</div>
+
+
+	<button type="button" id="removebtn">Remove</button>
+	<button type="button" id="emptybtn">Empty</button>
+	<button type="button" id="removebtn">Detach</button>
+	<button type="button" id="addbtn">Add</button>
+
+		<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+			// $(window.document).ready(function(){
+			// 	console.log("hay");
+
+			// });
+			
+			// jQuery(document).ready(function(){
+			// 	console.log("hi");
+
+			// });
+
+			// jQuery(window.document).ready(function(){
+			// 	console.log("harr");
+			// });
+
+			// window.jQuery(window.document).ready(function(){
+			// 	console.log('hoooo');
+			// });
+
+
+
+
+
+			// $(document).ready(function(){
+			// 	console.log('hi');
+			// });
+
+			// remove()  = just remove self
+			$('#removebtn').click(function(){
+				$('h1').remove();
+				$('h1,h2').remove();
+
+
+			});
+
+			// empty()  = just remove to child
+
+			$('#emptybtn').click(function(){
+
+				$('div').empty();
+			});
+
+			// detach() = remove()
+
+			$('#detachbin').click(function(){
+
+				$('div').detach()
+			});
+
+			// add
+			$('#addbtn').click(function(){
+				$('h1').css({
+					"background-color" :"yellow",
+					"border":"3px dashed red"
+				})
+
+				$('h1,h2').css({
+					"background-color" :"yellow",
+					"border":"3px dashed red"
+				})
+
+				$('h1,h2').css({
+					"background-color" :"yellow",
+					"border":"3px dashed red"
+				})
+			})
+
+		</script>
+</body>
+</html>

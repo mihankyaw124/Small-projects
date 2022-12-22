@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family:sans-serif;
+			background-color:#000;
+			height:100vh;
+
+			display:flex;
+			justify-content: center;
+			align-items:center;
+		}
+
+		h1{
+			color:transparent;
+			font-size:50px;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+
+			-webkit-text-stroke:2px red;
+
+			position:relative;
+
+			overflow:hidden;
+
+			white-space:nowrap;
+		}
+
+	   h1::before{
+	   	content:attr(title);
+
+	   	width:0;
+	   	color:yellow;
+	   	border-right:5px solid yellow;
+
+	   	position: absolute;
+	   	left:0;
+	   	top:0;
+	   	overflow:hidden;
+
+	   	animation:myani 5s linear infinite;
+	   }
+
+
+	   @keyframes myani{
+	   	0%{
+
+	   		width:0;
+
+	   	}
+
+	   	50%{
+	   		width:100%;
+
+
+	   	}
+	   	100%{
+
+	   		width:0;
+
+	   	}
+	   }
+	</style>
+</head>
+<body>
+
+
+	<h1 title="Thanks You For Shopping With Us">Thanks You For Shopping With Us...</h1>
+</body>
+</html>

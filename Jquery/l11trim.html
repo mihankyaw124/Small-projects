@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trim Method</title>
+</head>
+<body>
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+
+
+		$(document).ready(function(){
+			// console.log('hi');
+
+			// var something = "              Welcome to jQuery lessons                      ";
+			var something = "\n\n           Welcome to jQuery lessons                     \n\n"
+			console.log("Before using trim = "+ something);
+
+			// Method 1
+			something = jQuery.trim(something);
+			console.log("After using trim = " + something);
+
+			// Method 2
+			something = $.trim(something);
+			console.log("After using trim = " + something);
+
+
+
+
+
+
+		})
+	</script>
+
+</body>
+</html>

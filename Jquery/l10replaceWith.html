@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>replaceWith Method</title>
+	<style type="text/css">
+
+		body{
+			height:100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		.container{
+			width:500px;
+			background-color:#f4f4f4;
+			padding:20px;
+		}
+
+		h2{
+			color:red;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+
+	<div class="container">
+
+		<h1>Are you ready to learn jQuery ??</h1>
+		<p id="caption">this is jQuery version 3.6</p>
+		<button type="button" class="btn">Click Me</button>
+		
+	</div>
+
+
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hi');
+
+			$('button').click(function(){
+				$('h1').replaceWith("<h2>Welcome to jQuery</h2>");
+
+				$('#caption').replaceWith("<i style=\"display:block;margin-bottom:20px\">this is l10 about fro replaceWith Method</i>");
+
+				$('.btn').replaceWith("<input type=\"button\" value='Thanks' />");
+			})
+		})
+	</script>
+
+</body>
+</html>

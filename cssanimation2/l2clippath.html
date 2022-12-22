@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clip Path</title>
+	<style type="text/css">
+		.shape{
+			width:500px;
+			height:300px;
+		}
+		#circle{
+			/*clip-path: circle();*/
+
+			/*clip-path: circle(100px);*/
+			/*clip-path:circle(200px);*/
+			/*clip-path: circle(300px);*/
+
+			/*circle( shape-radius at  position)*/
+			/*clip-path: circle(200px at center); default*/
+			/*clip-path: circle(200px at bottom);*/
+			/*clip-path: circle(200px at top);*/
+			/*clip-path: circle(200px at left);*/
+			/*clip-path: circle(200px at right);*/
+
+
+			/*clip-path:circle(100px at 0);*/
+			/*clip-path:circle(100px at 100px);*/
+			/*clip-path:circle(100px at 300px);*/
+			/*clip-path:circle(100px at 500px);*/
+
+			         /*circle ( shape-radius at width height)*/
+			     /*clip-path:circle(200px at 50px 20px);*/
+			     /*clip-path:circle(200px at 50px 300px);*/
+			     /*clip-path:circle(200px at 0 20px);*/
+
+
+
+			    /*clip-path:circle(10%);*/
+			     /*clip-path:circle(30%);*/
+                /*clip-path:circle(50%);*/
+                 /*clip-path:circle(100%);*/
+
+
+                 /*clip-path:circle(50% at 50% 20%);*/
+
+
+
+
+
+
+
+		}
+
+		#polygon{
+			clip-path: polygon(1% 1%, 99% 1%, 100% 21%, 59% 21%, 59% 100%, 35% 100%, 35% 23%, 3% 22%);
+		}
+
+
+		#ellipse{
+			/*clip-path:ellipse(150px 50px);
+			clip-path:ellipse(150px 100px);
+			clip-path:ellipse(100px 50px);*/
+
+			/*clip-path: ellipse(100% 50%);*/
+			/*clip-path: ellipse(100% 30%);*/
+			/*clip-path: ellipse(50% 30%);*/
+			/*clip-path: ellipse(30% 100%);*/
+
+
+			/*ellipse(shape-radius         at           position)*/
+			clip-path: ellipse(150px 50px at center);  
+			/*clip-path: ellipse(150px 50px at left);  */
+			/*clip-path: ellipse(150px 50px at right);*/
+			/*clip-path: ellipse(150px 50px at top);*/
+			/*clip-path: ellipse(150px 50px at bottom);*/
+
+
+			/*ellipse(shape-radius  at width )*/
+			clip-path: ellipse(150px 50px at 20%);
+			clip-path: ellipse(150px 50px at 50%);
+			clip-path: ellipse(150px 50px at 100%);
+
+				/*ellipse(shape-radius  at width  height)*/
+			clip-path: ellipse(30% 100% at 20% 30%);
+			clip-path: ellipse(30% 100% at 50% 10%);
+			
+
+			
+		}
+	</style>
+</head>
+<body>
+
+
+	<img src="img/dog.jpg" id="circle" class="shape" alt="circle"/>
+
+	<hr/>
+
+	<img src="./img/dog.jpg" id="polygon" class="shape" alt="polygon" />
+
+	<hr/>
+
+	<img src="./img/dog.jpg" id="ellipse" class="shape" alt="ellipse">
+
+</body>
+</html>

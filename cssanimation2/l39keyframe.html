@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyframe</title>
+	<style type="text/css">
+
+		body{
+			padding:0;
+			margin:0;
+
+		}
+
+		div{
+			width:150px;
+			height:150px;
+			background:steelblue;
+			animation-name: myani;
+			animation-duration: 0.5s;
+			/*animation-fill-mode: forwards;*/
+			/*animation-fill-mode: backwards;*/
+			animation-delay:3s;
+
+		}
+
+
+
+		@keyframes myani{
+			0%{
+				transform: translate(0px);
+			}
+
+			50%{
+				transform: translateX(800px);
+			}
+			100%{
+				transform: translateX(800px) translateY(800px);
+			}
+		}
+		
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+
+
+</body>
+</html>

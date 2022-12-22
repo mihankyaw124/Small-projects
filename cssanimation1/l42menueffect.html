@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Card</title>
+	<style type="text/css">
+
+		body{
+			font-family: sans-serif;
+			background-color:#777;
+			height:100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			margin:0;
+			overflow:hidden;
+		}
+
+
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+
+			/*display: flex;
+			flex-direction: column;*/
+		}
+		ul li{
+			margin:5px;
+		}
+
+		ul li a{
+			display: block;
+			height: 40px;
+			/*background-color:green;*/
+			text-decoration: none;
+			font-size: 20px;
+			color:#fff;
+			letter-spacing: 2px;
+
+			padding: 5px 10px;
+
+			position: relative;
+
+			overflow:hidden;
+
+			
+		}
+
+	   ul li a span{
+	     	width:100%;
+	     	height:100%;
+
+
+	     	display: flex;
+	     	justify-content: center;
+	     	align-items: center;
+
+	     	transition: all 0.5s;
+
+	     	
+	   }
+
+	  /* a:hover span:nth-child(1){
+	   	transform: translateY(-100%);
+	   }*/
+
+	    a:hover span:nth-child(1){                           /*first-child*/
+	   	transform: translateY(-100%);
+	   }
+
+	    a:hover span:nth-child(2){
+	   	transform: translateY(-100%);
+	   }
+
+	   a::before{
+	   	content:'';
+
+	   	width:100%;
+	   	height:100%;
+	   	background-color: skyblue;
+
+	   	position:absolute;
+	   	top:0;
+	   	left:0;
+
+	   	transform: scaleX(0);
+	   	transition: all 0.5s;
+
+	   	transform-origin: left;
+
+	   }
+	   a:hover::before{
+	   	transform: scaleX(1);
+
+	   	transition-delay: 0.5s;
+	   }
+ 			
+
+
+
+
+	</style>
+	   }
+	   
+</head>
+<body>
+
+	<ul>
+		
+		    <li><a href="#">
+		    	<span>Home</span>
+		    	<span>Home</span>
+		    </a></li>
+			<li><a href="#"><span> About </span><span> About </span> </a></li>
+			<li><a href="#"> <span> Services </span><span> Services </span></a></li>
+			<li><a href="#"><span> Porfolio</span><span> Porfolio</span> </a></li>
+			<li><a href="#"><span> Contact </span><span> Contact </span></a></li>
+	</ul>
+
+</body>
+</html>

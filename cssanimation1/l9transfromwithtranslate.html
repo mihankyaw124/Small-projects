@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with Translate</title>
+	<style type="text/css">
+
+		.container{
+			width:1000px;
+			background:grey;
+		}
+
+		.container .square{
+			width:150px;
+			height:60px;
+			background:red;
+			color:#fff;
+			font-size:20px;
+			padding:10px 0;
+			margin:20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+
+		#translate:hover{
+			/*translate()*/
+
+			/*transform: translate(300px);*/
+			transform:translate(-100px);
+
+			transform: translate(200%);
+		}
+
+		#translatex:hover{
+			/*translateX(x)*/
+
+			/*transform: translateX(100px);*/
+			transform: translateX(-100px);
+			
+		}
+		
+		#translatey:hover{
+			/*translateY(y)*/
+
+			transform: translateY(100px);
+			transform: translateY(-80px);
+
+		}
+		
+		#translatexy:hover{
+			/*translate(x,y)*/
+
+			/*transform: translate(100px,0);*/
+			/*transform: translate(0,100px);*/
+			/*transform: translate(0,-100px);*/
+
+			/*transform: translate(100%,0);*/
+			/*transform: translate(100px,100px);*/
+			/*transform: translate(100px,-100px);*/
+			transform: translate(-100px,-100px);
+			
+		}
+		img{
+			width:300px;
+
+			display:block;
+			margin:auto;
+
+			transition: transform 1s; 
+		}
+		img:hover{
+
+			/*transform: translate(300px);*/
+			/*transform: translate(-500px);*/
+
+			/*transform: translateX(-100%);*/
+
+			/*transform: translateY(50%);*/
+			/*transform: translateY(-100%);*/
+
+			/*transform: translate(-100%,-100%);*/
+			/*transform: translate(-100%,100%);*/
+
+			transform: translateX(-100%) translateY(100%);
+
+		}
+		
+		
+
+	</style>
+
+	</head>
+	<body>
+
+		<div class="container">
+			<div id="translate" class="square">Translate Me</div>
+		</div>
+		<div class="container">
+			<div id="translatex" class="square">Translate X</div>
+		</div>
+		<div class="container">
+			<div id="translatey" class="square">Translate Y</div>
+		</div>
+		<div class="container">
+			<div id="translatexy" class="square">Translate XY</div>
+		</div>
+
+		<div>
+		<img src="./img/dog.jpg" alt="dog"/>
+	</div>
+	
+	</body>
+</html>

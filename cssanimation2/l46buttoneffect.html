@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		
+		body{
+			height:100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn{
+			width:200px;
+			background-color:red;
+			color:#fff;
+			font-size:20px;
+			text-transform: uppercase;
+			letter-spacing:10px;
+			border:none;
+			border-radius:40px;
+			padding:20px 50px;
+			cursor:pointer;
+
+			position:relative;
+
+			overflow:hidden;
+
+
+		}
+
+		.btn .wave{
+			width:200px;
+			height:200px;
+
+			background-color:blue;
+
+			position:absolute;
+			left:0;
+			top:0;
+
+			box-shadow:inset 0 0 50px rgba(0,0,0,0.5);
+
+			/*z-index:-1;*/
+			transition: 0.5s;
+
+
+		}
+
+		.btn span{
+			position:relative;
+
+			z-index:1;
+		}
+
+		.btn .wave::before,.btn .wave::after{
+			content:'';
+			width:200%;
+			height:200%;
+			background-color:#000;
+
+			position:absolute;
+			left:0;
+			top:0;
+
+
+			transform:translate(-50%,-50%);
+			
+		}
+
+		.btn .wave::before{
+			content:'';
+			background-color:rgba(0,0,10,1);
+
+		
+			border-radius:40%;
+
+			animation:mywave 5s linear infinite;
+		}
+
+		.btn .wave::after{
+			content:'';
+			background-color:rgba(0,0,0,0.5);
+
+		
+			border-radius:40%;
+
+			animation:mywave 10s linear infinite;
+
+
+		}
+
+		@keyframes mywave{
+			from{
+				transform:translate(-20%,-95%) rotate(0deg);
+			}
+
+			to{
+				transform:translate(-20%,-95%) rotate(1turn);
+			}
+		}
+
+		.btn:hover .wave{
+			top:-50px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<button type="button" class="btn">
+		<span>Hover Me</span>
+		<em class="wave"></em>
+		
+
+
+	</button>
+
+</body>
+</html>

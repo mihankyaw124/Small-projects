@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data and Remove data</title>
+</head>
+<body>
+
+
+	<div class="container">
+
+		<div>
+			<h3>Student Data</h3>
+			
+		</div>
+
+		<ul>
+			<li>Name :<span>???</span></li>
+			<li>Age :<span>???</span></li>
+			<li>Phone : <span>???</span></li>
+		</ul>
+
+		<button type="button" class="newcaption-btn">New Caption</button>
+		<button type="button" class="removecaption-btn">Remove Caption</button>
+
+</div>
+
+
+
+
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+
+
+		$(document).ready(function(){
+			// console.log("hi");
+
+			$('.newcaption-btn').click(function(){
+
+				var setnewcap = $('div').data("newcaption","Customer Info");
+
+				var getnewcap = $('div').data("newcaption");
+
+				// console.log(getnewcap);
+
+				$('h3').text(getnewcap);
+
+			})
+
+			$('.removecation-btn').click(function(){
+				console.log('Before removeData = ',$('div').data("newcaption"));
+
+
+				$('div').removeD\ata("newcaption")
+
+			});
+
+
+		})
+
+	</script>
+		
+
+
+
+	</div>
+
+</body>
+</html>
